@@ -1,0 +1,16 @@
+# RPM macro file that simply stub out problematic macros so tools like
+# "quilt/rpm build" can run without really installing macro packages,
+# which can be quite large and irrelavent for our purpose.
+#
+# As a good practice: write in comment where the real definition is.
+#
+# PS: a more external tool friendly RPM SPEC-native solution would be to use
+# conditional macro, as explained in the following two articles:
+# 1. https://jfearn.fedorapeople.org/en-US/RPM/4/html/RPM_Guide/ch22s02s02.html
+# 2. http://rpm.org/api/4.4.2.2/conditionalbuilds.html
+#
+# However, this might not be a good idea, if some macros are too important to
+# be optional.
+
+# NOTE definition might be in "gconf2-devel" package.
+%gconf_schemas_prereq   #
