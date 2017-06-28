@@ -54,3 +54,9 @@ function list_stub_macros -d 'list all stub macros'
   echo "* List all macro stubs [$MACROS_STUB_FILE] :"
   grep -e '^%' $MACROS_STUB_FILE
 end
+
+function help -d 'Override fish help with custom info'
+  echo "* OBS-Workspace, available commond:"
+  # TODO better listing? Now listed manually in reverse order
+  echo "list_stub_macros stub_rpm_macro __docker_run ctop croot"
+end
